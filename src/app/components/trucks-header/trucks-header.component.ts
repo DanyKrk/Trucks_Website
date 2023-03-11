@@ -10,7 +10,7 @@ import { UiService } from 'src/app/services/ui.service';
   styleUrls: ['./trucks-header.component.css']
 })
 export class TrucksHeaderComponent {
-  title: string = 'Truck Creator';
+  title: string = 'Trucks Manager';
   showCreateTruck: boolean = false;
   subscription: Subscription;
 
