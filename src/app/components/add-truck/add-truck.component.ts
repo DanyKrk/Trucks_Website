@@ -38,6 +38,9 @@ export class AddTruckComponent {
       fastChargingTime: this.fastChargingTime,
       isActive: this.isActive
     }
+    if(newTruck.isActive != true){
+      newTruck.isActive = false;
+    }
 
     this.onAddTruck.emit(newTruck);
 

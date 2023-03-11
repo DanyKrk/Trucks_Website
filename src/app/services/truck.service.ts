@@ -32,7 +32,7 @@ export class TruckService {
   }
 
   addTruck(truck: Truck): Observable<Truck>{
-    const url =  `${this.apiUrl}/post`;
+    const url =  `${this.apiUrl}`;
     return this.http.post<Truck>(url, truck, httpOptions);
   }
 
@@ -40,24 +40,25 @@ export class TruckService {
     const url =  `${this.apiUrl}/update/${truck.id}`;
     const patchTruck: PatchTruck = {
       tare: truck?.tare,
-      load_capacity: truck?.loadCapacity,
-      maximum_battery_charge: truck?.maximumBatteryCharge,
-      autonomy_when_fully_charged: truck?.autonomyWhenFullyCharged,
-      fast_charging_time: truck?.fastChargingTime,
-      is_active: truck?.isActive
+      loadCapacity: truck?.loadCapacity,
+      maximumBatteryCharge: truck?.maximumBatteryCharge,
+      autonomyWhenFullyCharged: truck?.autonomyWhenFullyCharged,
+      fastChargingTime: truck?.fastChargingTime,
+      isActive: truck?.isActive
     };
     return this.http.patch<PatchTruck>(url, patchTruck, httpOptions);
   }
 
-  putTruck(truck: Truck): Observable<PatchTruck>{
+  putTruck(truck: Truck): Observable<PutTruck>{
     const url =  `${this.apiUrl}`;
-    const patchTruck: PatchTruck = {
+    const patchTruck: PutTruck = {
+      id: truck?.id,
       tare: truck?.tare,
-      load_capacity: truck?.loadCapacity,
-      maximum_battery_charge: truck?.maximumBatteryCharge,
-      autonomy_when_fully_charged: truck?.autonomyWhenFullyCharged,
-      fast_charging_time: truck?.fastChargingTime,
-      is_active: truck?.isActive
+      loadCapacity: truck?.loadCapacity,
+      maximumBatteryCharge: truck?.maximumBatteryCharge,
+      autonomyWhenFullyCharged: truck?.autonomyWhenFullyCharged,
+      fastChargingTime: truck?.fastChargingTime,
+      isActive: truck?.isActive
     };
     return this.http.put<PutTruck>(url, patchTruck, httpOptions);
   }

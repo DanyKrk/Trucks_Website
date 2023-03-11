@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { PutTruck } from 'src/app/models/PutTruck';
 import { Truck } from 'src/app/models/Truck';
 //import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,14 +21,14 @@ export class TruckItemComponent {
   }
 
   onInhibit(){
-    const newTruck: Truck = {
+    const newTruck: PutTruck = {
       id: this.truck?.id,
       tare: this.truck?.tare,
       loadCapacity: this.truck?.loadCapacity,
       maximumBatteryCharge: this.truck?.maximumBatteryCharge,
       autonomyWhenFullyCharged: this.truck?.autonomyWhenFullyCharged,
       fastChargingTime: this.truck?.fastChargingTime,
-      isActive: !this.truck?.isActive
+      isActive: !this.truck?.isActive,
     };
     this.onInhibitTruck.emit(newTruck);
   }

@@ -27,15 +27,20 @@ export class TrucksComponent {
   }
 
   addTruck(truck: Truck): void{
+    console.log(truck);
     this.truckService.addTruck(truck).subscribe(() => this.fetchTrucks());
   }
 
   fetchTrucks(): void{
     this.truckService.getTrucks().subscribe((trucks_api_response) => this.trucks = trucks_api_response.data);
-    // this.truckService.getTrucks().subscribe((trucks_api_response) => console.log(trucks_api_response));
   }
 
   patchTruck(truck: Truck): void{
     this.truckService.patchTruck(truck).subscribe(() => this.fetchTrucks());
+  }
+
+  putTruck(truck: Truck): void{
+    console.log(truck);
+    this.truckService.putTruck(truck).subscribe(() => this.fetchTrucks());
   }
 }
