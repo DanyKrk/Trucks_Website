@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Truck } from '../../../../models/Truck';
-import { UiService } from '../../../../services/ui/ui.service';
+import { Truck } from 'src/app/models/Truck';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-add-truck',

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { TrucksAPIRespose } from '../../models/TrucksAPIResponse';
-import { Truck } from '../../models/Truck';
-import { PatchTruck } from '../../models/PatchTruck';
+import { TrucksAPIRespose } from '../models/TrucksAPIResponse';
+import { Truck } from '../models/Truck';
+import { PatchTruck } from '../models/PatchTruck';
 
 
 const httpOptions = {

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Subscription } from 'rxjs';
-import { UiService } from '../../../../services/ui/ui.service';
+import { UiService } from 'src/app/services/ui.service';
+
 
 @Component({
   selector: 'app-trucks-header',

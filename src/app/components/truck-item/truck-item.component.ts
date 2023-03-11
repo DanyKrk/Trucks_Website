@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Truck } from 'src/app/models/Truck';
 //import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Truck } from '../../../../models/Truck';
+
 
 @Component({
   selector: 'app-truck-item',
