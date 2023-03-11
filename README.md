@@ -1,9 +1,9 @@
 # Trucks_Website
 Technologies: JS, TS, Angular, HTML, CSS
 
-This is a website for an imaginary delivery company. It allows to monitor the fleet of the trucks owned by the company: ![main_view](./pictures/trucks_manager_main_view.png)
+This is a website for an imaginary delivery company. It allows to monitor the fleet of the trucks owned by the company and change the activity status of the already existing trucks: ![main_view](./pictures/trucks_manager_main_view.png)
 
-And add new trucks to the fleet and change the activity status of the already existing trucks: ![create_truck_view](./pictures/trucks_manager_create_truck.png)
+As well as to add new trucks to the fleet : ![create_truck_view](./pictures/trucks_manager_create_truck.png)
 
 The website uses an external API to connect to the database. You can find the code of the used API on my repository: https://github.com/DanyKrk/Trucks_API .
 
