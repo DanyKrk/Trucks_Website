@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { TrucksAPIRespose } from '../models/TrucksAPIResponse';
 import { Truck } from '../models/Truck';
 import { PatchTruck } from '../models/PatchTruck';
+import { TRUCKS_API_URL } from '../interfaces/constants';
 
 
 const httpOptions = {
@@ -16,7 +17,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TruckService {
-  private apiUrl = 'http://localhost:9090/api/trucks'
+  private apiUrl = TRUCKS_API_URL
 
   constructor(private http:HttpClient) { }
 

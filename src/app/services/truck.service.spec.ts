@@ -1,6 +1,6 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { TRUCKS_API_URL } from '../../interfaces/constants'
+import { TRUCKS_API_URL } from '../interfaces/constants';
 import { TruckService } from './truck.service';
 
 describe('TruckService', () => {
