@@ -1,5 +1,7 @@
 import { Truck } from "./Truck";
 
 export interface TrucksAPIRespose {
-    trucks: Truck[];
+    data: Truck[];
+    success: boolean;
+    message: string;
   }

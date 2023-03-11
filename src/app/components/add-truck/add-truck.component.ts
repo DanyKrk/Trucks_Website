@@ -11,14 +11,13 @@ import { UiService } from 'src/app/services/ui.service';
 export class AddTruckComponent {
   @Output() onAddTruck: EventEmitter<Truck> = new EventEmitter();
 
-  _id: number | undefined;
-  domainId: string | undefined;
+  id: number | undefined;
   tare: number | undefined;
-  load_capacity: number | undefined;
-  maximum_battery_charge: number | undefined;
-  autonomy_when_fully_charged: number | undefined;
-  fast_charging_time: number | undefined;
-  is_active: boolean | undefined;
+  loadCapacity: number | undefined;
+  maximumBatteryCharge: number | undefined;
+  autonomyWhenFullyCharged: number | undefined;
+  fastChargingTime: number | undefined;
+  isActive: boolean | undefined;
 
   showCreateTruck: boolean = false;
   subscription: Subscription;
@@ -31,23 +30,22 @@ export class AddTruckComponent {
     //@todo - add data validation
 
     const newTruck = {
-      _id: this._id,
-      domainId: this.domainId,
+      id: this.id,
       tare: this.tare,
-      load_capacity: this.load_capacity,
-      maximum_battery_charge: this.maximum_battery_charge,
-      autonomy_when_fully_charged: this.autonomy_when_fully_charged,
-      fast_charging_time: this.fast_charging_time,
-      is_active: this.is_active
+      loadCapacity: this.loadCapacity,
+      maximumBatteryCharge: this.maximumBatteryCharge,
+      autonomyWhenFullyCharged: this.autonomyWhenFullyCharged,
+      fastChargingTime: this.fastChargingTime,
+      isActive: this.isActive
     }
 
     this.onAddTruck.emit(newTruck);
 
     this.tare = 0;
-    this.load_capacity = 0;
-    this.maximum_battery_charge = 0;
-    this.autonomy_when_fully_charged = 0;
-    this.fast_charging_time = 0;
-    this.is_active = true;
+    this.loadCapacity = 0;
+    this.maximumBatteryCharge = 0;
+    this.autonomyWhenFullyCharged = 0;
+    this.fastChargingTime = 0;
+    this.isActive = true;
   }
 }

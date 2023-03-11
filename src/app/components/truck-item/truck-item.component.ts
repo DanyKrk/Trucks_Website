@@ -21,14 +21,13 @@ export class TruckItemComponent {
 
   onInhibit(){
     const newTruck: Truck = {
-      _id: this.truck?._id,
-      domainId: this.truck?.domainId,
+      id: this.truck?.id,
       tare: this.truck?.tare,
-      load_capacity: this.truck?.load_capacity,
-      maximum_battery_charge: this.truck?.maximum_battery_charge,
-      autonomy_when_fully_charged: this.truck?.autonomy_when_fully_charged,
-      fast_charging_time: this.truck?.fast_charging_time,
-      is_active: !this.truck?.is_active
+      loadCapacity: this.truck?.loadCapacity,
+      maximumBatteryCharge: this.truck?.maximumBatteryCharge,
+      autonomyWhenFullyCharged: this.truck?.autonomyWhenFullyCharged,
+      fastChargingTime: this.truck?.fastChargingTime,
+      isActive: !this.truck?.isActive
     };
     this.onInhibitTruck.emit(newTruck);
   }

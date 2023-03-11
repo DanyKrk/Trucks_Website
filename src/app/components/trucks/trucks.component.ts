@@ -21,7 +21,7 @@ export class TrucksComponent {
   deleteTruck(truck: Truck): void{
     this.truckService.deleteTruck(truck).subscribe(
       () => this.trucks = this.trucks.filter(
-        (t) => t.domainId !== truck.domainId
+        (t) => t.id !== truck.id
       )
     );
   }
@@ -31,7 +31,8 @@ export class TrucksComponent {
   }
 
   fetchTrucks(): void{
-    this.truckService.getTrucks().subscribe((trucks_api_response) => this.trucks = trucks_api_response["trucks"]);
+    this.truckService.getTrucks().subscribe((trucks_api_response) => this.trucks = trucks_api_response.data);
+    // this.truckService.getTrucks().subscribe((trucks_api_response) => console.log(trucks_api_response));
   }
 
   patchTruck(truck: Truck): void{
