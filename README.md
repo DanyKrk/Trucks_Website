@@ -12,4 +12,4 @@ How to use:
 2. Specify the URL of the used API in the src/app/interfaces/constatns.ts file.
 3. While being in the Trucks_Website folder run the "ng serve" command.
 
-The website should run after you complete the steps. To view the website you should enter the URL specified in the response to the "ng serve" command (usually http://localhost:4200/).
+The website should run after you complete the steps. To view the website you should enter using the browser the URL specified in the response to the "ng serve" command (usually http://localhost:4200/).
